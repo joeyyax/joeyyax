@@ -10,6 +10,7 @@
     ],
     "build": {
         "env": {
+            "JOEYYAX_GTM_ID": "@joeyyax_gtm_id"
         }
     }
 }

@@ -1,0 +1,14 @@
+.hello{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative; z-index: 10;
+
+    .hello--photo{
+        width: 120px;
+        border-radius: 500px;
+        border: 4px solid #fff;
+        box-shadow: 0 10px 30px rgba( 0, 0, 0, 0.2 );
+    }
+}

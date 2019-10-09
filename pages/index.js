@@ -1,18 +1,24 @@
 import React from 'react'
 import Head from 'next/head'
+import Public from '../layouts/Public'
+import Hello from '../components/Hello/Hello';
 
-import './index.scss'
+import '../styles/app.scss'
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Joey Yax</title>
-      <link rel='icon' href='/img/favicon.ico' />
-    </Head>
-    <div className="hello">
-      <img className="hello--photo" src="/img/joeyyax.jpg" alt="" title="" />
-    </div>
-  </div>
-)
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    const name = "Joey Yax"
+    return(
+      <Public title={name}>
+          <Hello />
+      </Public>
+    )
+  }
+}
 
 export default Home

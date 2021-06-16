@@ -1,33 +1,30 @@
-import React from 'react'
-import Head from 'next/head'
-import TagManager from 'react-gtm-module'
+import React from "react";
+import Head from "next/head";
+import TagManager from "react-gtm-module";
 
 class Public extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+  componentDidMount() {
+    TagManager.initialize({
+      gtmId: process.env.JOEYYAX_GTM_ID,
+    });
+  }
 
-    componentDidMount() {
-        TagManager.initialize({
-            gtmId: process.env.JOEYYAX_GTM_ID
-        })
-    }
+  render() {
+    return (
+      <>
+        <Head>
+          <title>{this.props.title}</title>
+        </Head>
 
-    render() {
-        return (
-            <>
-                <Head>
-                    <title>{this.props.title}</title>
-                </Head>
-
-                <div className="main">
-                    {this.props.children}
-                </div>
-            </>
-        )
-    }
+        <div className="main">{this.props.children}</div>
+      </>
+    );
+  }
 }
 
-export default Public
+export default Public;

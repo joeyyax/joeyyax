@@ -1,9 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import Public from '../layouts/Public'
-import Hello from '../components/Hello/Hello';
-
-import '../styles/app.scss'
+import React from "react";
+import Head from "next/head";
+import Public from "../layouts/Public";
+import Hello from "../components/Hello/Hello";
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,13 +10,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const name = "Joey Yax"
-    return(
+    const name = "Joey Yax";
+    return (
       <Public title={name}>
-          <Hello />
+        <Hello />
       </Public>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;

@@ -10,7 +10,7 @@ class Public extends React.Component {
 
   componentDidMount() {
     TagManager.initialize({
-      gtmId: process.env.JOEYYAX_GTM_ID,
+      gtmId: process.env.GTM_ID,
     });
   }
 
